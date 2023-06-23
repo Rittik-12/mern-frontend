@@ -2,6 +2,7 @@ import { Box, useMediaQuery } from '@mui/material'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import Navbar from 'views/navbar'
+import FriendListWidget from 'views/widgets/FriendListWidget'
 import MyPostWidget from 'views/widgets/MyPostWidget'
 import PostsWidget from 'views/widgets/PostsWidget'
 import UserWidget from 'views/widgets/UserWidget'
@@ -28,6 +29,10 @@ export const HomePage = () => {
       </Box>
       {isNonMobileScreen && (
         <Box flexBasis="26%">
+          <Box m="2rem 0">
+            <FriendListWidget userId={_id}/>
+
+          </Box>
          
         </Box>
       )}
